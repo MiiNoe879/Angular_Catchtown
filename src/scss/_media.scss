@@ -1,0 +1,71 @@
+/* Mobile Displays */
+
+@media (max-width: 600px) {
+
+  .wrap {
+    padding: 0 4vw;
+
+    &.wrap-tight {
+      padding: 0 6vw;
+    }
+  }
+
+  dropzone.dz-wrapper {
+    width: 100%;
+  }
+
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .show-mobile {
+    display: block !important;
+  }
+
+  .horizontal-flex {
+
+    &.flex-reverse-mobile {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .vertical-flex {
+    &.flex-reverse-mobile {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .btn-long {
+
+    flex-wrap: nowrap;
+
+    h3 {
+      font-size: 0.8em;
+    }
+  }
+
+  /* Stepper */
+
+  .mat-horizontal-stepper-content, .mat-horizontal-content-container, mat-horizontal-stepper {
+    width: 100vw !important;
+    padding: 0 !important;
+  }
+}
+
+@media (min-width: 601px) {
+  .show-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .is-fixed {
+    position: fixed;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrap {
+    max-width: 1200px !important;
+  }
+}

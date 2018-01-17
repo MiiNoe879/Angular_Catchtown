@@ -1,0 +1,44 @@
+<div class="horizontal-flex" id="navbar" *ngIf="showHeader()" [class.is-logo-only]="isLogoOnly()">
+  <div class="wrap horizontal-flex" [class.justify-center]="isMobile" [class.justify-between]="!isMobile">
+    <div class="sidenav-open" *ngIf="!isLogoOnly() && isMobile">
+      <a class="no-underline" (click)="isSidenavActive = true"><i class="material-icons">menu</i></a>
+    </div>
+    <div class="vertical-flex header-title">
+      <a routerLink="/" class="no-underline vertical-flex">
+        <div class="horizontal-flex justify-between">
+          <h1 class="is-montserrat is-bold">Catchtown <span *ngIf="!isMobile">- Chicago</span></h1>
+        </div>
+        <h4 class="is-montserrat is-medium" *ngIf="!isMobile">Catch the Best Deals in Town</h4>
+      </a>
+    </div>
+    <div class="horizontal-flex reverse" *ngIf="!isLogoOnly() && !isMobile && !isAuthenticated">
+      <a [routerLink]="['/auth', 'signup']" class="nav-link signup no-underline">SignUp</a>
+      <a [routerLink]="['/auth', 'login']" class="nav-link login no-underline">Login</a>
+    </div>
+    <div class="horizontal-flex reverse" *ngIf="!isLogoOnly() && !isMobile && isAuthenticated">
+      <app-user-menu *ngIf="userInfo" [user]="userInfo" (logout)="logout()"></app-user-menu>
+    </div>
+  </div>
+</div>
+
+<div class="sidenav-panel" [class.active]="isSidenavActive">
+  <div class="horizontal-flex">
+    <a [routerLink]="['/auth', 'login']" class="nav-link login no-underline is-medium" (click)="isSidenavActive = false">Login</a>
+    <a [routerLink]="['/auth', 'signup']" class="nav-link signup no-underline is-medium" (click)="isSidenavActive = false">SignUp</a>
+    <a routerLink="" class="no-underline close-sidenav nav-link" (click)="isSidenavActive = false"><i class="material-icons">menu</i></a>
+  </div>
+  <div class="spacer"></div>
+  <div class="vertical-flex">
+    <div class="sidenav-link">
+      <a routerLink="" class="no-underline">Import Listing</a>
+    </div>
+    <div class="sidenav-link">
+      <a routerLink="" class="no-underline">Messages</a>
+    </div>
+    <div class="sidenav-link">
+      <a routerLink="" class="no-underline">FAQ</a>
+    </div>
+  </div>
+</div>
+
+<div class="panel-cover" *ngIf="isSidenavActive"></div>

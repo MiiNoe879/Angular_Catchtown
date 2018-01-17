@@ -1,0 +1,15 @@
+.desktop {
+  mat-progress-bar {
+    height: 50px !important;
+  }
+
+  p {
+    color: #fff;
+  }
+}
+
+.mobile {
+  mat-progress-bar {
+    width: 80vw;
+  }
+}

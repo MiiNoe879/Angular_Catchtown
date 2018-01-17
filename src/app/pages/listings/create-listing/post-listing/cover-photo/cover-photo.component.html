@@ -1,0 +1,6 @@
+<div class="vertical-flex" [class.mobile]="isMobile">
+  <hr class="lighter">
+  <div [dropzone]="dzConfig" class="cover-dropzone" [runInsideAngular]="true" (success)="success($event)" (error)="onError($event)"></div>
+  <div class="spacer"></div>
+  <a href="#" class="no-underline text-centered">or Browse Folders</a>
+</div>

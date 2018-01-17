@@ -1,0 +1,19 @@
+<hr class="lighter">
+<div class="container">
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <h2 class="text-centered is-medium is-roboto has-medium-letter-spacing">Connect To Cragslist</h2>
+  <p class="has-medium-letter-spacing">Items exported to Craigslist have 47% higher chance of being sold</p>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <a class="primary-btn continue-btn btn-long-extra no-underline">Export To Cragslist</a>
+
+  <div class="horizontal-flex step-button-container is-3">
+    <div class="column">
+      <button class="btn primary-btn" (click)="previousStep()">Back</button>
+    </div>
+  </div>
+
+  <a class="no-underline" [routerLink]="['/listings', 'post', 'listed']">Skip</a>
+</div>

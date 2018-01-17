@@ -1,0 +1,30 @@
+<div class="wrap">
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  <div class="progress-container">
+    <mat-progress-bar mode="determinate" [value]="progressValue"></mat-progress-bar>
+    <h3 [class.step1]="!isMobile" [class.text-centered]="isMobile" *ngIf="progressValue === 25">Add Cover Photo</h3>
+    <h3 [class.step2]="!isMobile" [class.text-centered]="isMobile" *ngIf="progressValue === 50">Apply Filter To Cover Photo</h3>
+    <h3 [class.step3]="!isMobile" [class.text-centered]="isMobile" *ngIf="progressValue === 75">Set Details</h3>
+    <h3 [class.step4]="!isMobile" [class.text-centered]="isMobile" *ngIf="progressValue === 100">Connect to Craigslist</h3>
+  </div>
+  <div class="spacer"></div>
+  <mat-horizontal-stepper #stepper>
+    <mat-step label="Add Cover Photo">
+      <app-cover-photo (stepProgress)="nextStep($event)" [stepper]="stepper"></app-cover-photo>
+    </mat-step>
+    <mat-step label="Apply Filter to Cover Photo">
+      <!--<app-apply-filter (stepProgress)="nextStep($event)" [stepper]="stepper"></app-apply-filter>-->
+      <app-category-selector (stepProgress)="nextStep($event)" [stepper]="stepper"></app-category-selector>
+    </mat-step>
+    <mat-step label="Set Details">
+      <app-set-details (stepProgress)="nextStep($event)" [stepper]="stepper"></app-set-details>
+    </mat-step>
+    <mat-step label="Connect">
+      <!--<app-list-post (stepProgress)="nextStep($event)" [stepper]="stepper"></app-list-post>-->
+      <app-set-description></app-set-description>
+    </mat-step>
+  </mat-horizontal-stepper>
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+</div>

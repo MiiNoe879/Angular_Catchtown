@@ -1,0 +1,44 @@
+<div class="mobile z-depth-half" *ngIf="isMobile;else detailsFaqDesktop">
+  <h1 class="title is-regular has-medium-letter-spacing">FAQ</h1>
+  <span class="small has-small-letter-spacing">35 Questions</span>
+  <hr class="light">
+  <div class="faq">
+    <div class="qa-set">
+      <p class="question is-semibold has-medium-letter-spacing">How can I fix this mac?</p>
+      <p class="answer has-medium-letter-spacing">This is not a problem, you can buy all the parts on Ebay etc</p>
+    </div>
+    <hr class="light">
+    <div class="qa-set">
+      <p class="question is-semibold has-medium-letter-spacing">Can I return the laptop if it does not come out to fix it?</p>
+      <p class="answer has-medium-letter-spacing">No, you can’t. I cannot be sure what manipulation you will do.</p>
+    </div>
+    <hr class="light">
+    <div class="qa-set">
+      <p class="question is-semibold has-medium-letter-spacing">What difference between 2015 and 2017 mac?</p>
+      <p class="answer has-medium-letter-spacing">It has a lot. You should visit apple.com</p>
+    </div>
+    <hr class="light">
+    <a>Show More</a>
+  </div>
+</div>
+
+<ng-template #detailsFaqDesktop>
+  <div class="desktop">
+    <h1 class="title is-regular has-medium-letter-spacing">FAQ<span class="small has-small-letter-spacing">35 Questions</span></h1>
+    <div class="faq">
+      <div class="qa-set">
+        <p class="question is-semibold has-medium-letter-spacing">How can I fix this mac?</p>
+        <p class="answer has-medium-letter-spacing">This is not a problem, you can buy all the parts on Ebay etc</p>
+      </div>
+      <div class="qa-set">
+        <p class="question is-semibold has-medium-letter-spacing">Can I return the laptop if it does not come out to fix it?</p>
+        <p class="answer has-medium-letter-spacing">No, you can’t. I cannot be sure what manipulation you will do.</p>
+      </div>
+      <div class="qa-set">
+        <p class="question is-semibold has-medium-letter-spacing">What difference between 2015 and 2017 mac?</p>
+        <p class="answer has-medium-letter-spacing">It has a lot. You should visit apple.com</p>
+      </div>
+      <a class="is-pulled-right">Show More</a>
+    </div>
+  </div>
+</ng-template>

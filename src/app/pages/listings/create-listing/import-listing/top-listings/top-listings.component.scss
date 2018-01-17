@@ -1,0 +1,54 @@
+p {
+  margin: 2px 0;
+  font-size: 15px !important;
+}
+
+.top-listings {
+  overflow-x: auto;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(216, 216, 216, 0.4);
+
+  .listing-item {
+    display: inline-flex !important;
+    flex-wrap: nowrap !important;
+    width: 300px;
+    white-space: normal !important;
+    height: 100px;
+    padding: 5px 10px;
+
+    &:nth-of-type(1) {
+      background-color: #E3F5FF;
+    }
+
+    div {
+      white-space: normal !important;
+
+      &.img {
+        height: 80%;
+        display: flex;
+        align-items: center;
+
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+
+      &.vertical-flex {
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+h4 {
+  font-size: 14px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 14px;
+}

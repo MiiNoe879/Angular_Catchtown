@@ -1,0 +1,21 @@
+<div class="vertical-flex">
+  <div class="img-container z-depth-half">
+    <img src="assets/images/sample-product.png" alt="">
+    <h1 class="price is-medium is-roboto">$1,299.99</h1>
+  </div>
+  <div class="spacer is-small"></div>
+  <div class="horizontal-flex actions justify-between" *ngIf="!isMobile">
+    <button class="primary-btn is-regular has-small-letter-spacing">Messages</button>
+    <button class="primary-btn blue-button is-regular has-small-letter-spacing">Schedule<br>Appointment</button>
+  </div>
+  <div class="spacer is-small"></div>
+  <div class="vertical-flex map z-depth-half" style="margin-top: 0" *ngIf="!isMobile">
+    <agm-map [latitude]="34.0195" [longitude]="-118.4912"></agm-map>
+    <div class="spacer is-small"></div>
+    <div class="map-detail">
+      <h1 class="is-regular has-medium-letter-spacing" style="font-size: 25px">Santa Monica, CA, USA</h1>
+      <p><a class="no-underline has-small-letter-spacing">15 minutes by car</a> (10 miles from you)</p>
+    </div>
+    <div class="spacer is-small"></div>
+  </div>
+</div>

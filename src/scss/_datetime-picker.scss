@@ -1,0 +1,115 @@
+@import '../../node_modules/ng-pick-datetime/assets/style/picker.min.css';
+@import "_variables";
+
+.owl-dateTime-dialog {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 0 5px 68px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  display: flex !important;
+  flex-wrap: wrap;
+
+  .owl-calendar-wrapper, .owl-timer-wrapper {
+    padding: 0 20px !important;
+    flex: 0 0 50%;
+  }
+
+  .owl-dateTime-btnWrapper {
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+
+    .owl-dateTime-btn {
+      flex: 0 0 80%;
+      border: none;
+      border-radius: 5px;
+      font-size: 17px;
+      margin: 0 auto;
+      position: relative;
+      top: -20px;
+    }
+
+    .owl-dateTime-btnConfirm {
+      background-color: $primary-green;
+    }
+
+    .owl-dateTime-btnClose {
+      background: none;
+      color: #007EBC;
+    }
+  }
+
+  * {
+    font-family: 'Lato', sans-serif !important;
+  }
+
+  .owl-day {
+    padding: 0 !important;
+    width: 2vmax !important;
+    height: 2vamx !important;
+    line-height: 1 !important;
+
+    &.owl-calendar-selected {
+      border-radius: 5px !important;
+    }
+
+    a {
+      height: auto !important;
+      font-size: 17px !important;
+    }
+  }
+
+  td:not(.owl-calendar-selected):not(.owl-calendar-invalid):hover {
+    border-radius: 5px !important;
+  }
+
+  tr.owl-weekdays {
+    display: none !important;
+  }
+
+  .owl-calendar-control .owl-calendar-controlContent {
+    .month-control, .year-control {
+      font-size: 17px !important;
+      font-weight: 400 !important;
+      pointer-events: none !important;
+    }
+
+    .year-control {
+      font-style: normal !important;
+      color: $primary-text !important;
+    }
+  }
+
+  .owl-timer-wrapper {
+    background: none !important;
+    position: relative;
+
+    .owl-timer {
+      margin-top: 20px;
+    }
+
+    .owl-timer-control {
+      display: none !important;
+    }
+
+    .owl-timer-input {
+      height: 40px;
+    }
+
+    .owl-meridian-btn {
+      font-size: 17px;
+      color: #fff;
+      border-color: $primary-green;
+      background-color: $primary-green;
+      height: 40px;
+    }
+
+    &::before {
+      content: 'Set Time';
+      font-size: 17px;
+      position: absolute;
+      top: 0;
+      left: 20%;
+    }
+  }
+}

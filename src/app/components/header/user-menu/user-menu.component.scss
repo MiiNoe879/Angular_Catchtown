@@ -1,0 +1,19 @@
+button.trigger {
+  background: none;
+  border: none;
+  color: #fff;
+  outline: none;
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+
+  p, mat-icon {
+    color: #fff;
+  }
+
+  p {
+    margin: 0 15px;
+  }
+}

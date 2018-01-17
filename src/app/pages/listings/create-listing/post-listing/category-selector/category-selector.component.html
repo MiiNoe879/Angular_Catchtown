@@ -1,0 +1,8 @@
+<div class="categories">
+  <ul class="no-style inline">
+    <li *ngFor="let category of categories" (click)="setCategory(category.uuid)">
+      <a class="is-roboto is-medium category" type="button"><img src="/assets/icons/{{category.iconName}}" alt=""></a>
+      <h3 class="is-roboto is-medium">{{category.name}}</h3>
+    </li>
+  </ul>
+</div>

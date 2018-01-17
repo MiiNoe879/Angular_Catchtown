@@ -1,0 +1,52 @@
+<div class="mobile" *ngIf="isMobile; else detailsHeaderDesktop">
+  <h3 class="title is-regular has-small-letter-spacing" style="margin-top: 0">Macbook Pro 15" (Mid 2015) i7 2.5 GHz, 16 GB Ram, 512 SSD - For Parts Or Repair</h3>
+  <div class="distance-and-actions">
+    <div class="horizontal-flex justify-between">
+      <p style="font-size: 15px !important;" class="is-primary horizontal-flex justify-between">Santa Monica, CA</p>
+      <div class="distance">
+        <ul class="no-style inline">
+          <li class="is-muted horizontal-flex justify-between"><img src="assets/icons/location.svg" alt="" style="margin-right: 6px">10 mil.</li>
+          <li class="is-muted horizontal-flex justify-between"><img src="assets/icons/car.svg" alt="" style="margin-right: 6px">15 min.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p class="description has-medium-letter-spacing z-depth-half">
+    This computer appears to have come in contact with water at some point. I cannot guarantee the full functionality of this computer. It powers on as shown in the pictures. It is also covered under the AppleCare warranty through June 16, 2019, though I don't believe Apple will warranty it if it has come in contact with water. It has minor impressions on the top and bottom and minor marks on the screen. It is being sold as is-for parts or repair. See pictures for condition details.
+  </p>
+  <div class="spacer"></div>
+  <div class="actions">
+    <ul class="no-style inline">
+      <li class="horizontal-flex z-depth-half"><img src="assets/icons/star_blue.svg" alt="">&nbsp;Save</li>
+      <li class="horizontal-flex z-depth-half"><img src="assets/icons/thumbs-down.svg" alt="">&nbsp;Report</li>
+      <li class="horizontal-flex z-depth-half"><img src="assets/icons/share.svg" alt="">&nbsp;Share</li>
+    </ul>
+  </div>
+</div>
+
+<ng-template #detailsHeaderDesktop>
+  <div class="desktop">
+    <h1 class="title is-regular has-small-letter-spacing" style="margin-top: 0">Macbook Pro 15" (Mid 2015) i7 2.5 GHz, 16 GB Ram, 512 SSD - For Parts Or Repair</h1>
+    <div class="distance-and-actions">
+      <div class="horizontal-flex justify-between">
+        <div class="distance">
+          <ul class="no-style inline">
+            <li class="is-primary horizontal-flex justify-between">Santa Monica, CA</li>
+            <li class="is-muted horizontal-flex justify-between"><img src="assets/icons/location.svg" alt="" style="margin-right: 6px">10 mil.</li>
+            <li class="is-muted horizontal-flex justify-between"><img src="assets/icons/car.svg" alt="" style="margin-right: 6px">15 min.</li>
+          </ul>
+        </div>
+        <div class="actions">
+          <ul class="no-style inline">
+            <li class="horizontal-flex"><img src="assets/icons/star_blue.svg" alt="">&nbsp;Save</li>
+            <li class="horizontal-flex"><img src="assets/icons/thumbs-down.svg" alt="">&nbsp;Report</li>
+            <li class="horizontal-flex"><img src="assets/icons/share.svg" alt="">&nbsp;Share</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="description has-medium-letter-spacing">
+      This computer appears to have come in contact with water at some point. I cannot guarantee the full functionality of this computer. It powers on as shown in the pictures. It is also covered under the AppleCare warranty through June 16, 2019, though I don't believe Apple will warranty it if it has come in contact with water. It has minor impressions on the top and bottom and minor marks on the screen. It is being sold as is-for parts or repair. See pictures for condition details.
+    </p>
+  </div>
+</ng-template>

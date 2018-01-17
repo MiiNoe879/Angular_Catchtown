@@ -1,0 +1,49 @@
+@media (max-width: 600px) {
+  .wrap {
+    padding: 0 !important;
+  }
+
+  app-set-details, app-cover-photo, app-apply-filter, app-post-listing {
+    max-width: 100vw;
+  }
+
+  .progress-container {
+    padding: 0 12px;
+  }
+}
+
+.wrap {
+  max-width: 940px !important;
+}
+
+.progress-container {
+  position: relative;
+
+  h3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #cacaca;
+    font-size: 14px;
+    margin: 8px 0;
+
+    &.step1 {
+      left: 25%;
+    }
+
+    &.step2 {
+      left: 50%;
+    }
+
+    &.step3 {
+      left: 75%;
+    }
+
+    &.step4 {
+      right: 0;
+      text-align: right !important;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@import "../../../../../../scss/_variables";
+
+.container {
+
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px 0;
+
+  h2 {
+
+    &, & a {
+      font-size: 27px;
+      color: $primary-text;
+    }
+  }
+
+
+  .items {
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 80%;
+
+    .item {
+      text-align: center;
+
+      img {
+        width: 64px;
+        height: 64px;
+      }
+    }
+  }
+
+  .connect-options {
+    width: 80%;
+    margin: 0 auto;
+    .option {
+      justify-content: space-between;
+      border-bottom: 1px solid #ccc;
+
+      .connect {
+        color: #e5e5e5;
+
+        span {
+          color: $primary-text;
+          font-size: 24px;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  .btn-long-extra {
+    width: 100%;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+  }
+
+}
+
+.svg {
+  margin-right: 12px;
+  width: 28px;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .item {
+    flex: 1 1 100%;
+  }
+
+  .option {
+    justify-content: space-between !important;
+  }
+}

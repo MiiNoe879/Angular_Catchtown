@@ -1,0 +1,33 @@
+<section id="loginSection" class="vertical-flex wrap" [class.mobile]="isMobile">
+  <a href="#" class="btn-long no-underline facebook-btn horizontal-flex justify-evenly">
+    <img src="assets/icons/facebook.svg" alt="" class="popup-icon">
+    <h2 class="is-thin has-medium-letter-spacing">Continue With Facebook</h2>
+  </a>
+  <div class="spacer" [class.is-small]="isMobile"></div>
+  <h3 class="or text-centered is-regular is-roboto">Or login with email below</h3>
+  <div class="spacer is-small"></div>
+  <div id="loginForm" class="horizontal-flex">
+    <form #form="ngForm">
+      <fieldset class="material-input">
+        <label for="email" class="icon"><img src="assets/icons/mail.svg" alt="" class="svg-icon"></label>
+        <input type="email" id="email" name="email" placeholder="Email" class="material-input has-icon" ngModel>
+        <span class="bar"></span>
+      </fieldset>
+      <fieldset class="material-input">
+        <label for="password" class="icon"><img src="assets/icons/lock.svg" alt="" class="svg-icon"></label>
+        <input type="password" id="password" name="password" placeholder="Password" class="material-input has-icon" ngModel>
+        <span class="bar"></span>
+      </fieldset>
+      <a [routerLink]="['/auth', 'forgot']" class="text-centered no-underline"><h3 class="is-regular is-primary">Forgot Password?</h3></a>
+    </form>
+  </div>
+  <a class="btn-long no-underline continue-btn horizontal-flex" (click)="login()">
+    <h2 class="is-thin has-medium-letter-spacing">Continue</h2>
+  </a>
+  <div class="spacer is-small"></div>
+  <h3 class="text-centered is-regular">New To Catchtown?</h3>
+  <div class="spacer is-small"></div>
+  <a [routerLink]="['/auth', 'signup']" class="btn-long signup-btn no-underline horizontal-flex">
+    <h2 class="is-thin has-medium-letter-spacing">SignUp</h2>
+  </a>
+</section>

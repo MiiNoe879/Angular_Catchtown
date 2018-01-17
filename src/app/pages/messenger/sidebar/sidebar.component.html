@@ -1,0 +1,4 @@
+<div>
+  <messenger-search></messenger-search>
+  <messenger-people *ngFor="let person of people; let i = index" [class.active]="person.isActive" [ngClass]="{active: i === 0}"></messenger-people>
+</div>

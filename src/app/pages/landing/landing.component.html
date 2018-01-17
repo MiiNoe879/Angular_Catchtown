@@ -1,0 +1,114 @@
+<header>
+  <nav class="horizontal-flex">
+    <div class="wrap horizontal-flex" [class.justify-between]="!isMobile">
+      <div class="vertical-flex">
+        <h1 class="is-montserrat is-bold header-title">Catchtown<span *ngIf="!isMobile"> - Chicago</span></h1>
+        <h3 class="is-montserrat is-regular has-large-letter-spacing" *ngIf="!isMobile">Catch the Best deals in Town</h3>
+      </div>
+      <div class="app-btn-container horizontal-flex justify-between nowrap" *ngIf="!isMobile">
+        <div class="app-btn">
+          <img src="assets/images/appstore.png" alt="" class="app-os-icon">
+        </div>
+        <div class="app-btn">
+          <img src="assets/images/playstore.png" alt="" class="app-os-icon">
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="wrap">
+    <div class="vertical-flex align-center">
+      <h1 class="is-medium text-centered" style="font-size: 36px">Sell Smart Locally.</h1>
+      <div class="horizontal-flex" style="width: 60%; flex-wrap: nowrap; margin: 0 auto">
+        <div class="no-icon">
+          <img src="assets/images/spam.png" alt="">
+          <p class="is-medium has-medium-letter-spacing">No Spam</p>
+        </div>
+        <div class="no-icon">
+          <img src="assets/images/flakes.png" alt="">
+          <p class="is-medium has-medium-letter-spacing">No Flakes</p>
+        </div>
+        <div class="no-icon">
+          <img src="assets/images/headache.png" alt="">
+          <p class="is-medium has-medium-letter-spacing">No Headache</p>
+        </div>
+      </div>
+      <h2 class="is-lato is-regular text-centered" style="font-size: 33px">The 100% better, cleaner and safer alternative</h2>
+      <div class="spacer is-small"></div>
+      <div class="horizontal-flex cta-container">
+        <a class="primary-btn blue-button no-underline" [routerLink]="['/auth', 'login']"><h2 class="is-lato has-medium-letter-spacing is-regular">Login</h2></a>
+        <a class="primary-btn no-underline" [routerLink]="['/auth', 'signup']"><h2 class="is-lato has-medium-letter-spacing is-regular">SignUp</h2></a>
+      </div>
+      <div class="spacer is-small"></div>
+      <div class="app-btn-container horizontal-flex justify-between nowrap" *ngIf="isMobile" [style.max-width]="appContainerMaxWidth()" style="margin: 0 auto">
+        <div class="app-btn text-centered">
+          <img src="assets/images/appstore.png" alt="" class="app-os-icon">
+        </div>
+        <div class="app-btn text-centered">
+          <img src="assets/images/playstore.png" alt="" class="app-os-icon">
+        </div>
+      </div>
+      <div class="spacer"></div>
+    </div>
+  </div>
+</header>
+<div class="spacer is-small"></div>
+<main>
+  <section class="additional-info wrap">
+    <div class="horizontal-flex justify-between">
+      <div class="horizontal-flex">
+        <div class="info-image">
+          <img src="assets/images/safety.png" alt="">
+        </div>
+        <div class="info-text vertical-flex align-start justify-start">
+          <h2 class="is-roboto is-medium has-medium-letter-spacing">Safety</h2>
+          <p class="is-lato has-large-letter-spacing is-regular" style="color:#5a5a5a!important;">Reviewed and phone<br>verified users</p>
+        </div>
+      </div>
+      <div class="horizontal-flex">
+        <div class="info-image">
+          <img src="assets/images/security.png" alt="">
+        </div>
+        <div class="info-text vertical-flex align-start justify-start">
+          <h2 class="is-roboto is-medium has-medium-letter-spacing">Payment Security</h2>
+          <p class="is-lato has-large-letter-spacing is-regular" style="color:#5a5a5a!important;">E-payment option assures 100% payment guarantee.</p>
+        </div>
+      </div>
+      <div class="horizontal-flex">
+        <div class="info-image">
+          <img src="assets/images/time.png" alt="">
+        </div>
+        <div class="info-text vertical-flex align-start justify-start">
+          <h2 class="is-roboto is-medium has-medium-letter-spacing">Save Time</h2>
+          <p class="is-lato has-large-letter-spacing is-regular" style="color:#5a5a5a!important;">1-click adds answers to FAQ when same question is asked multiple times</p>
+        </div>
+      </div>
+      <div class="horizontal-flex">
+        <div class="info-image">
+          <img src="assets/images/law-ballers.png" alt="">
+        </div>
+        <div class="info-text vertical-flex align-start justify-start">
+          <h2 class="is-roboto is-medium has-medium-letter-spacing">Eliminate Low-Ballers</h2>
+          <p class="is-lato has-large-letter-spacing is-regular" style="color:#5a5a5a!important;">Set the lowest acceptable price privately</p>
+        </div>
+      </div>
+      <div class="horizontal-flex">
+        <div class="info-image">
+          <img src="assets/images/feedback.png" alt="">
+        </div>
+        <div class="info-text vertical-flex align-start justify-start">
+          <h2 class="is-roboto is-medium has-medium-letter-spacing">Buy or Skip</h2>
+          <p class="is-lato has-large-letter-spacing is-regular" style="color:#5a5a5a!important;">Instant feedback from friends on facebook</p>
+        </div>
+      </div>
+      <div class="horizontal-flex">
+        <div class="info-image">
+          <img src="assets/images/marketing.png" alt="">
+        </div>
+        <div class="info-text vertical-flex align-start justify-start">
+          <h2 class="is-roboto is-medium has-medium-letter-spacing">Marketing Tools</h2>
+          <p class="is-lato has-large-letter-spacing is-regular" style="color:#5a5a5a!important;">Auto relist on major classifieds site</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

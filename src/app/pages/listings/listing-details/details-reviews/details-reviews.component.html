@@ -1,0 +1,185 @@
+<div class="mobile z-depth-half" *ngIf="isMobile; else detailsReviewsDesktop">
+  <div class="horizontal-flex justify-between align-start is-padded" style="width: 100%">
+    <div class="horizontal-flex nowrap">
+      <img src="assets/images/stacy.png" alt="" class="avatar-big is-4">
+      <div class="vertical-flex stretch is-8">
+        <h1 class="title is-regular has-medium-letter-spacing">Sold By Stacy</h1>
+        <ul class="no-style inline horizontal-flex justify-start no-margin">
+          <li class="horizontal-flex has-small-letter-spacing" style="margin-right: 15px"><img src="assets/icons/check-circle.svg" alt="" style="margin-right: 6px">Phone</li>
+          <li class="horizontal-flex has-small-letter-spacing"><img src="assets/icons/check-circle_gray.svg" alt="" style="margin-right: 6px">Email</li>
+        </ul>
+        <div class="horizontal-flex justify-start nowrap" style="margin-top: 2px">
+          <h2 class="is-regular rating-title has-medium-letter-spacing">10 Reviews</h2>
+          <div class="rating" style="margin: 0"><star-rating-comp [starType]="'svg'" [rating]="4.40"></star-rating-comp></div>
+        </div>
+      </div>
+    </div>
+    <div class="vertical-flex">
+      <div class="flaked is-thin has-medium-letter-spacing">
+        Flaked: 0 times
+      </div>
+    </div>
+  </div>
+  <hr class="light">
+  <div class="user-reviews">
+    <ul class="no-style">
+      <li>
+        <div class="is-padded horizontal-flex justify-evenly align-start">
+          <div class="is-2">
+            <img src="assets/images/stacy.png" alt="" class="avatar">
+          </div>
+          <div class="vertical-flex is-10">
+            <div class="horizontal-flex justify-start">
+              <div class="user-name is-medium is-roboto">
+                Alex
+              </div>
+              <div class="user-rating">
+                <star-rating-comp [starType]="'svg'" [rating]="4.63"></star-rating-comp>
+              </div>
+            </div>
+            <div class="user-review">
+              <p class="has-medium-letter-spacing">Thanks for the quickness and the care taken in packaging this MacBook. The unite is not perfect as a previously owned by someone else. However it meets my expectation. Many blessings to you and your team.</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <hr class="light">
+      <li>
+        <div class="is-padded horizontal-flex justify-evenly align-start">
+          <div class="is-2">
+            <img src="assets/images/stacy.png" alt="" class="avatar">
+          </div>
+          <div class="vertical-flex is-10">
+            <div class="horizontal-flex justify-start">
+              <div class="user-name is-medium is-roboto">
+                dredger2k3
+              </div>
+              <div class="user-rating">
+                <star-rating-comp [starType]="'svg'" [rating]="5.00"></star-rating-comp>
+              </div>
+            </div>
+            <div class="user-review">
+              <p class="has-medium-letter-spacing">So I bought this computer and it gave my co-workers mac book pro envy! It's in great shape and runs flawlessly. I have been a PC guy for yrs. so I do have a learning curve. My friends will help me with that . I think they are looking now to up grade.......</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <hr class="light">
+      <li>
+        <div class="is-padded horizontal-flex justify-evenly align-start">
+          <div class="is-2">
+            <img src="assets/images/stacy.png" alt="" class="avatar">
+          </div>
+          <div class="vertical-flex is-10">
+            <div class="horizontal-flex justify-start">
+              <div class="user-name is-medium is-roboto">
+                rawdawglj
+              </div>
+              <div class="user-rating">
+                <star-rating-comp [starType]="'svg'" [rating]="5.00"></star-rating-comp>
+              </div>
+            </div>
+            <div class="user-review">
+              <p class="has-medium-letter-spacing">Nice to cooperate with Stacy. Will buy something alse again!</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <hr class="light">
+    </ul>
+    <a>Show More</a>
+  </div>
+</div>
+
+<ng-template #detailsReviewsDesktop>
+  <div class="desktop">
+    <div class="horizontal-flex justify-between" style="width: 100%">
+      <div class="horizontal-flex">
+        <img src="assets/images/stacy.png" alt="" class="avatar-big">
+        <div class="vertical-flex stretch">
+          <h1 class="title is-regular has-medium-letter-spacing">Sold By Stacy</h1>
+          <ul class="no-style inline horizontal-flex justify-between" style="margin-top: 8px; margin-bottom: 0">
+            <li class="horizontal-flex has-small-letter-spacing" style="margin-right: 15px"><img src="assets/icons/check-circle.svg" alt="" style="margin-right: 6px">Phone</li>
+            <li class="horizontal-flex has-small-letter-spacing"><img src="assets/icons/check-circle_gray.svg" alt="" style="margin-right: 6px">Email</li>
+          </ul>
+        </div>
+      </div>
+      <div class="vertical-flex">
+        <div class="horizontal-flex justify-between" style="margin-top: 2px">
+          <h1 class="title is-regular has-medium-letter-spacing">10 Reviews</h1>
+          <div class="rating"><star-rating-comp [starType]="'svg'" [rating]="4.40"></star-rating-comp></div>
+        </div>
+        <div class="flaked is-thin has-medium-letter-spacing">
+          Flaked: 0 times
+        </div>
+      </div>
+    </div>
+    <div class="spacer is-small"></div>
+    <hr class="lighter">
+    <div class="user-reviews">
+      <ul class="no-style">
+        <li>
+          <div class="horizontal-flex justify-evenly align-start">
+            <div class="is-2">
+              <img src="assets/images/stacy.png" alt="" class="avatar">
+            </div>
+            <div class="vertical-flex is-10">
+              <div class="horizontal-flex justify-start">
+                <div class="user-name is-medium is-roboto">
+                  Alex
+                </div>
+                <div class="user-rating">
+                  <star-rating-comp [starType]="'svg'" [rating]="4.63"></star-rating-comp>
+                </div>
+              </div>
+              <div class="user-review">
+                <p class="has-medium-letter-spacing">Thanks for the quickness and the care taken in packaging this MacBook. The unite is not perfect as a previously owned by someone else. However it meets my expectation. Many blessings to you and your team.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="horizontal-flex justify-evenly align-start">
+            <div class="is-2">
+              <img src="assets/images/stacy.png" alt="" class="avatar">
+            </div>
+            <div class="vertical-flex is-10">
+              <div class="horizontal-flex justify-start">
+                <div class="user-name is-medium is-roboto">
+                  dredger2k3
+                </div>
+                <div class="user-rating">
+                  <star-rating-comp [starType]="'svg'" [rating]="5.00"></star-rating-comp>
+                </div>
+              </div>
+              <div class="user-review">
+                <p class="has-medium-letter-spacing">So I bought this computer and it gave my co-workers mac book pro envy! It's in great shape and runs flawlessly. I have been a PC guy for yrs. so I do have a learning curve. My friends will help me with that . I think they are looking now to up grade.......</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="horizontal-flex justify-evenly align-start">
+            <div class="is-2">
+              <img src="assets/images/stacy.png" alt="" class="avatar">
+            </div>
+            <div class="vertical-flex is-10">
+              <div class="horizontal-flex justify-start">
+                <div class="user-name is-medium is-roboto">
+                  rawdawglj
+                </div>
+                <div class="user-rating">
+                  <star-rating-comp [starType]="'svg'" [rating]="5.00"></star-rating-comp>
+                </div>
+              </div>
+              <div class="user-review">
+                <p class="has-medium-letter-spacing">Nice to cooperate with Stacy. Will buy something alse again!</p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <a class="is-pulled-right">Show More</a>
+    </div>
+  </div>
+</ng-template>

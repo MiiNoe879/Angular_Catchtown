@@ -1,0 +1,44 @@
+.sidebar {
+  flex: 0 0 30%;
+  border-right: 1px solid #d8d8d8;
+}
+
+.main {
+  flex: 0 0 70%;
+}
+
+.wrap {
+  width: 986px !important;
+}
+
+.messenger {
+  margin-top: 5vmax;
+  display: flex;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  position: relative;
+  height: 70vh;
+  width: 90vw;
+  background-color: #fff;
+
+  .close-btn {
+    position: absolute;
+    right: 20px;
+
+    img {
+      height: 24px;
+      font-size: 30px;
+      margin: 0.83em 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+h2 {
+  margin: 0;
+  padding: 0.83em 0 0.83em 12px;
+  border-bottom: 1px solid #d8d8d8;
+}

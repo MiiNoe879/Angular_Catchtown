@@ -1,0 +1,68 @@
+@import "../../../../scss/_variables";
+
+#loginSection {
+  padding-top: 50px;
+  padding-bottom: 100px;
+
+  &.mobile {
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+}
+
+.facebook-btn {
+  background-color: #4468b2;
+}
+
+.btn-long.signup-btn {
+  background-color: #e0e1e0;
+  h2 {
+    color: $primary-blue;
+  }
+}
+
+.btn-long {
+  h2 {
+    color: #fff;
+  }
+}
+
+#loginForm {
+  justify-content: center;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+
+    fieldset, input {
+      width: 100%;
+    }
+  }
+}
+
+h3 {
+  font-size: 20px;
+}
+
+.has-icon {
+  padding-left: 60px;
+}
+
+.icon img {
+  width: 32px;
+  height: 32px;
+}
+
+@media (max-width: 600px) {
+  #loginForm {
+    form {
+      width: 100%;
+    }
+  }
+
+  .facebook-btn h2 {
+    font-size: 20px;
+  }
+}

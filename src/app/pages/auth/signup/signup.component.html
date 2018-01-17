@@ -1,0 +1,37 @@
+<section id="loginSection" class="vertical-flex wrap" [class.mobile]="isMobile">
+  <a  class="btn-long facebook-btn horizontal-flex justify-evenly">
+    <img src="assets/icons/facebook.svg" alt="" class="popup-icon">
+    <h2 class="has-medium-letter-spacing is-thin">Continue With Facebook</h2>
+  </a>
+  <div class="spacer" [class.is-small]="isMobile"></div>
+  <h3 class="or text-centered is-regular has-medium-letter-spacing">Or signup with email</h3>
+  <div class="spacer is-small"></div>
+  <div id="loginForm" class="horizontal-flex">
+    <form [formGroup]="form">
+      <fieldset class="material-input">
+        <label for="email" class="icon"><img src="assets/icons/mail.svg" alt="" class="svg-icon"></label>
+        <input type="email" id="email" name="email" formControlName="email" placeholder="Email" class="material-input has-icon" (change)="onChange()">
+        <span class="bar"></span>
+        <span *ngIf="form.get('email').dirty">
+          <small class="error" *ngIf="form.get('email').hasError('emailTaken')">This email has been registered already</small>
+      </span>
+      </fieldset>
+      <fieldset class="material-input">
+        <label for="name" class="icon"><img src="assets/icons/user.svg" alt="" class="svg-icon"></label>
+        <input type="text" id="name" name="name" formControlName="name" placeholder="Name" class="material-input has-icon">
+        <span class="bar"></span>
+      </fieldset>
+      <fieldset class="material-input">
+        <label for="password" class="icon"><img src="assets/icons/lock.svg" alt="" class="svg-icon"></label>
+        <input type="password" id="password" formControlName="password" name="passowrd" placeholder="Password" class="material-input has-icon">
+        <span class="bar"></span>
+      </fieldset>
+    </form>
+  </div>
+  <div class="spacer" [class.is-small]="isMobile"></div>
+  <a class="btn-long continue-btn horizontal-flex" (click)="signup()">
+    <h2 class="has-medium-letter-spacing is-thin">Continue</h2>
+  </a>
+  <div class="spacer is-small"></div>
+  <a [routerLink]="['/auth', 'login']" class="text-centered no-underline has-medium-letter-spacing" style="font-size: 20px">Have account on Catchtown?<br>Login</a>
+</section>

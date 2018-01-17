@@ -1,0 +1,111 @@
+@import "../../../scss/_variables";
+
+#navbar {
+  background-color: $primary-blue;
+  height: 100px;
+  z-index: 10;
+  border-bottom: 3px solid $secondary-blue;
+  position: relative;
+
+  * {
+    color: #fff;
+  }
+
+  h1, h4 {
+    margin: 2px 0;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+
+  h4 {
+    font-size: 17px;
+  }
+
+  &.is-logo-only {
+
+    background: none;
+    border: none;
+
+    h1, h4 {
+      &, & span {
+        color: $secondary-blue;
+      }
+    }
+  }
+}
+
+.nav-link {
+  padding: 10px 30px;
+
+  &.signup {
+    background-color: $primary-green;
+    border-radius: 5px;
+  }
+}
+
+.sidenav-open {
+  position: absolute;
+  left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.sidenav-panel {
+  padding-top: 30px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background: $primary-blue;
+  width: 80vmin;
+  max-width: 500px !important;
+  transform: translateX(-80vmin);
+  transition: all 0.3s ease-in-out;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  a {
+    color: #fff;
+  }
+
+  .horizontal-flex {
+    width: 100%;
+  }
+
+  .login {
+    justify-self: flex-start;
+  }
+
+  .signup {
+    justify-self: center;
+  }
+
+  .close-sidenav {
+    justify-self: flex-end;
+  }
+
+  .vertical-flex {
+    align-items: flex-start !important;
+  }
+
+  .sidenav-link {
+    margin: 20px;
+    text-align: left;
+  }
+}
+
+div.panel-cover {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 19;
+}

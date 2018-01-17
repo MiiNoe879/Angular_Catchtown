@@ -1,0 +1,22 @@
+<div class="mobile" *ngIf="isMobile;else errorDesktop">
+  <div class="vertical-flex text-centered">
+    <img src="assets/icons/X.svg" alt="">
+    <div class="spacer is-small"></div>
+    <h1 class="is-roboto is-medium">D'oh Invalid Link</h1>
+    <h2 class="is-roboto is-medium">Your Craigslist ad link should be like this:</h2>
+    <p>https://chicago.craigslist.org/chc/bks/d/bugs-life-pixar-12-volume/6363660898.html</p>
+  </div>
+</div>
+
+<ng-template #errorDesktop>
+  <div class="desktop">
+    <div class="vertical-flex text-centered is-marginless">
+      <div class="spacer is-small"></div>
+      <div class="spacer is-small"></div>
+      <img src="assets/icons/X-white.svg" alt="">
+      <h1 class="title medium has-medium-letter-spacing">D'oh Invalid Link</h1>
+      <div class="spacer is-medium-spacer"></div>
+      <p class="has-medium-letter-spacing is-marginless">Your Craigslist ad link should be like this:<br>https://chicago.craigslist.org/chc/bks/d/bugs-life-pixar-12-volume/6363660898.html</p>
+    </div>
+  </div>
+</ng-template>

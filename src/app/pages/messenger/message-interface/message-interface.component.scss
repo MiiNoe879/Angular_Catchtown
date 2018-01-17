@@ -1,0 +1,12 @@
+.vertical-flex {
+  margin: 40px 0;
+  position: relative;
+
+  app-message-input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+}

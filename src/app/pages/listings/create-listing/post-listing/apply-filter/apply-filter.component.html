@@ -1,0 +1,132 @@
+<div class="mobile" *ngIf="isMobile;else filtersDesktop">
+  <div class="wrap vertical-flex">
+    <hr class="lighter">
+    <div class="container nowrap justify-custom">
+      <div class="img-container">
+        <img src="assets/images/sample-product.png" alt="">
+      </div>
+      <div class="options-container vertical-flex justify-between">
+        <div class="filters-container">
+          <div class="filters">
+            <div class="filter-item vertical-flex highlighted">
+              <img src="assets/images/sample-product.png" alt="">
+              <p class="filter-title is-roboto has-medium-letter-spacing is-regular text-centered">Filter Title</p>
+            </div>
+            <div class="filter-item vertical-flex">
+              <img src="assets/images/sample-product.png" alt="">
+              <p class="filter-title is-roboto has-medium-letter-spacing is-regular text-centered">Filter Title</p>
+            </div>
+            <div class="filter-item vertical-flex">
+              <img src="assets/images/sample-product.png" alt="">
+              <p class="filter-title is-roboto has-medium-letter-spacing is-regular text-centered">Filter Title</p>
+            </div>
+            <div class="filter-item vertical-flex">
+              <img src="assets/images/sample-product.png" alt="">
+              <p class="filter-title is-roboto has-medium-letter-spacing is-regular text-centered">Filter Title</p>
+            </div>
+            <div class="filter-item vertical-flex">
+              <img src="assets/images/sample-product.png" alt="">
+              <p class="filter-title is-roboto has-medium-letter-spacing is-regular text-centered">Filter Title</p>
+            </div>
+            <div class="filter-item vertical-flex">
+              <img src="assets/images/sample-product.png" alt="">
+              <p class="filter-title is-roboto has-medium-letter-spacing is-regular text-centered">Filter Title</p>
+            </div>
+            <div class="filter-item vertical-flex">
+              <img src="assets/images/sample-product.png" alt="">
+              <p class="filter-title is-roboto has-medium-letter-spacing is-regular text-centered">Filter Title</p>
+            </div>
+            <div class="filter-item vertical-flex">
+              <img src="assets/images/sample-product.png" alt="">
+              <p class="filter-title is-roboto has-medium-letter-spacing is-regular text-centered">Filter Title</p>
+            </div>
+          </div>
+        </div>
+        <div class="spacer is-small"></div>
+        <a (click)="nextStep()" class="btn-long continue-btn no-underline">Continue</a>
+      </div>
+    </div>
+    <div class="horizontal-flex step-button-container is-6">
+      <div class="column">
+        <button class="btn primary-btn" (click)="previousStep()">Back</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #filtersDesktop>
+  <div class="desktop">
+    <div class="wrap vertical-flex" style="padding: 0">
+      <hr class="lighter">
+      <div class="container nowrap justify-custom" style="padding: 0">
+        <div class="img-container is-6">
+          <img src="assets/images/sample-product.png" alt="">
+        </div>
+        <div class="options-container vertical-flex is-6 justify-between">
+          <div class="filters-container vertical-flex">
+            <div class="filters horizontal-flex">
+              <div class="filter-item vertical-flex highlighted">
+                <img src="assets/images/sample-product.png" alt="">
+                <p class="filter-title is-roboto has-medium-letter-spacing is-regular">Filter Title</p>
+              </div>
+              <div class="filter-item vertical-flex">
+                <img src="assets/images/sample-product.png" alt="">
+                <p class="filter-title is-roboto has-medium-letter-spacing is-regular">Filter Title</p>
+              </div>
+              <div class="filter-item vertical-flex">
+                <img src="assets/images/sample-product.png" alt="">
+                <p class="filter-title is-roboto has-medium-letter-spacing is-regular">Filter Title</p>
+              </div>
+              <div class="filter-item vertical-flex">
+                <img src="assets/images/sample-product.png" alt="">
+                <p class="filter-title is-roboto has-medium-letter-spacing is-regular">Filter Title</p>
+              </div>
+            </div>
+            <div class="filters horizontal-flex">
+              <div class="filter-item vertical-flex">
+                <img src="assets/images/sample-product.png" alt="">
+                <p class="filter-title is-roboto has-medium-letter-spacing is-regular">Filter Title</p>
+              </div>
+              <div class="filter-item vertical-flex">
+                <img src="assets/images/sample-product.png" alt="">
+                <p class="filter-title is-roboto has-medium-letter-spacing is-regular">Filter Title</p>
+              </div>
+              <div class="filter-item vertical-flex">
+                <img src="assets/images/sample-product.png" alt="">
+                <p class="filter-title is-roboto has-medium-letter-spacing is-regular">Filter Title</p>
+              </div>
+              <div class="filter-item vertical-flex">
+                <img src="assets/images/sample-product.png" alt="">
+                <p class="filter-title is-roboto has-medium-letter-spacing is-regular">Filter Title</p>
+              </div>
+            </div>
+            <div class="filters horizontal-flex justify-start">
+              <div class="filter-item vertical-flex">
+                <img src="assets/images/sample-product.png" alt="">
+                <p class="filter-title is-roboto has-medium-letter-spacing is-regular">Filter Title</p>
+              </div>
+              <div class="filter-item vertical-flex">
+                <img src="assets/images/sample-product.png" alt="">
+                <p class="filter-title is-roboto has-medium-letter-spacing is-regular">Filter Title</p>
+              </div>
+              <div class="filter-item vertical-flex">
+                <img src="assets/images/sample-product.png" alt="">
+                <p class="filter-title is-roboto has-medium-letter-spacing is-regular">Filter Title</p>
+              </div>
+              <div class="filter-item vertical-flex">
+                <img src="assets/images/sample-product.png" alt="">
+                <p class="filter-title is-roboto has-medium-letter-spacing is-regular">Filter Title</p>
+              </div>
+            </div>
+          </div>
+          <a (click)="nextStep()" class="btn-long continue-btn no-underline">Continue</a>
+        </div>
+      </div>
+      <div class="horizontal-flex step-button-container is-6">
+        <div class="column">
+          <button class="btn primary-btn" (click)="previousStep()">Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

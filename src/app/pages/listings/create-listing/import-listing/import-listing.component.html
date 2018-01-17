@@ -1,0 +1,163 @@
+<div *ngIf="isMobile;else importDesktop">
+  <div class="mobile mobile-wrap">
+    <section class="cta">
+      <div class="wrap vertical-flex">
+        <div *ngIf="!importError" class="text-centered">
+          <h1 class="is-roboto is-medium">Sell Smart Locally.</h1>
+          <h1 class="is-medium">Copy Your Craigslist Listing to Catchtown</h1>
+          <div class="spacer" *ngIf="!inProgress"></div>
+        </div>
+        <app-import-error *ngIf="importError && !inProgress"></app-import-error>
+        <div class="horizontal-flex" *ngIf="!inProgress && !importError">
+          <form [formGroup]="form">
+            <fieldset class="material-input">
+              <label for="copyListing" class="icon"><img [src]="importIcon()" alt="" class="svg-icon"></label>
+              <input type="text" class="has-icon material-input" id="copyListing" name="craigslistLink" formControlName="craigslistLink" placeholder="Paste your Craigslist Link" [class.is-error]="importError">
+              <span class="bar"></span>
+            </fieldset>
+          </form>
+          <div class="spacer"></div>
+          <button type="button" class="primary-btn is-regular" (click)="importListing()">Copy</button>
+        </div>
+        <app-import-progress *ngIf="inProgress && !importError" [value]="progressValue"></app-import-progress>
+        <div class="spacer is-small"></div>
+        <a routerLink="/listings/post" class="no-underline is-medium" *ngIf="!inProgress && !importError">Post listing manually</a>
+        <div class="spacer"></div>
+        <div class="tips" *ngIf="importError && !inProgress">
+          <div class="horizontal-flex justify-between">
+            <div class="vertical-flex is-1" style="align-items: center">
+              <img src="assets/icons/bulb-grey.svg" alt="">
+              <h4 class="is-roboto is-medium">Tip</h4>
+            </div>
+            <div class="vertical-flex is-10">
+              <h1 class="is-roboto is-medium">Craigslist link can be found:</h1>
+              <ul class="tips-list">
+                <li>On the confirmation email sent to you when you first posted your ad, or</li>
+                <li>Going to your ad on Craigslist and copy the link from address bar.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--<section class="top-listings">-->
+      <!--<app-top-listings></app-top-listings>-->
+    <!--</section>-->
+    <div class="spacer"></div>
+    <section class="additional-info wrap" *ngIf="!importError && !inProgress">
+      <div class="vertical-flex">
+        <div class="horizontal-flex">
+          <div class="info-image">
+            <img src="assets/images/trust-grey.png" alt="">
+          </div>
+          <div class="info-text vertical-flex">
+            <h2 class="is-roboto is-medium is-primary">Trust</h2>
+            <p class="is-muted-dark">Start building trust with potential buyers through our unique feedback system</p>
+          </div>
+        </div>
+        <div class="horizontal-flex">
+          <div class="info-image">
+            <img src="assets/images/safe-grey.png" alt="">
+          </div>
+          <div class="info-text vertical-flex">
+            <h2 class="is-roboto is-medium is-primary">Safe</h2>
+            <p class="is-muted-dark">Review verifications and feedback of potential buyers before interaction</p>
+          </div>
+        </div>
+        <div class="horizontal-flex">
+          <div class="info-image">
+            <img src="assets/images/efficient-grey.png" alt="">
+          </div>
+          <div class="info-text vertical-flex">
+            <h2 class="is-roboto is-medium is-primary">Efficient</h2>
+            <p class="is-muted-dark">Avoid low-ballers using the auto-reject feature</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="horizontal-flex nowrap justify-evenly" *ngIf="importError && !inProgress">
+      <a class="primary-btn is-5 no-underline" (click)="importError = false">Try Again</a>
+      <a class="primary-btn blue-button is-5 no-underline" [routerLink]="['/listings', 'import']">Post Manually</a>
+    </div>
+    <div class="spacer"></div>
+  </div>
+</div>
+
+<ng-template #importDesktop>
+  <div class="desktop">
+    <section class="cta">
+      <div class="wrap vertical-flex" [class.is-padded]="!importError">
+        <div *ngIf="!importError" class="text-centered">
+          <h1 class="is-roboto is-semibold has-medium-letter-spacing">Sell Smart Locally.</h1>
+          <h1 class="is-medium has-medium-letter-spacing">Copy Your Craigslist Listing to Catchtown</h1>
+          <div class="spacer is-small"></div>
+          <div class="spacer" *ngIf="!inProgress"></div>
+        </div>
+        <app-import-error *ngIf="importError && !inProgress"></app-import-error>
+        <div class="horizontal-flex" *ngIf="!inProgress" style="width: 64%; flex-wrap: nowrap">
+          <form [formGroup]="form">
+            <fieldset class="text-centered">
+              <label for="copyListing" class="icon"><img [src]="importIcon()" alt="" class="svg-icon"></label>
+              <input type="text" class="has-icon" id="copyListing" name="craigslistLink" formControlName="craigslistLink" placeholder="Paste your Craigslist Link" [class.is-error]="importError">
+            </fieldset>
+          </form>
+          <button type="button" class="primary-btn is-regular" (click)="importListing()" style="margin-right: 12px">Continue</button>
+        </div>
+        <app-import-progress *ngIf="inProgress && !importError" [value]="progressValue"></app-import-progress>
+        <a routerLink="/listings/post" class="no-underline is-medium has-medium-letter-spacing" *ngIf="!inProgress">Post listing manually</a>
+        <div class="spacer"></div>
+        <div class="tips" [class.is-visible]="importError && !inProgress">
+          <div class="horizontal-flex justify-start">
+            <div class="is-1 vertical-flex align-start">
+              <div class="vertical-flex" style="align-items: center">
+                <img src="assets/icons/bulb.svg" alt="">
+                <h4 class="is-roboto is-medium">Tip</h4>
+              </div>
+            </div>
+            <div class="vertical-flex is-10" style="padding-left: 10px">
+              <h1 class="is-roboto is-medium has-large-letter-spacing">Craigslist link can be found:</h1>
+              <ul class="tips-list">
+                <li class="has-medium-letter-spacing">On the confirmation email sent to you when you first posted your ad, or</li>
+                <li class="has-medium-letter-spacing">Going to your ad on Craigslist and copy the link from address bar.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="top-listings">
+      <app-top-listings></app-top-listings>
+    </section>
+    <section class="additional-info wrap">
+      <div class="horizontal-flex justify-between">
+        <div class="horizontal-flex">
+          <div class="info-image">
+            <img src="assets/images/trust.png" alt="">
+          </div>
+          <div class="info-text vertical-flex align-start justify-start">
+            <h2 class="is-roboto is-medium">Trust</h2>
+            <p class="is-muted-dark">Start building trust with potential buyers through our unique feedback system</p>
+          </div>
+        </div>
+        <div class="horizontal-flex">
+          <div class="info-image">
+            <img src="assets/images/safe.png" alt="">
+          </div>
+          <div class="info-text vertical-flex align-start justify-start">
+            <h2 class="is-roboto is-medium">Safe</h2>
+            <p class="is-muted-dark">Review verifications and feedback of potential buyers before interaction</p>
+          </div>
+        </div>
+        <div class="horizontal-flex">
+          <div class="info-image">
+            <img src="assets/images/efficient.png" alt="">
+          </div>
+          <div class="info-text vertical-flex align-start justify-start">
+            <h2 class="is-roboto is-medium">Efficient</h2>
+            <p class="is-muted-dark">Avoid low-ballers using<br>the auto-reject<br>feature</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</ng-template>

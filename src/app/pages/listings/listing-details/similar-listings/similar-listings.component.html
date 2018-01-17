@@ -1,0 +1,47 @@
+<div class="similar-listings" [class.mobile]="isMobile" [class.z-depth-half]="isMobile">
+  <h1 class="is-regular">Similar Listings</h1>
+  <div class="horizontal-flex justify-between">
+    <div class="listing-item vertical-flex" [class.is-3]="!isMobile" [class.is-6]="isMobile">
+      <img src="assets/images/sample-product.png" alt="">
+      <h3 class="price is-roboto has-small-letter-spacing is-medium">$1,225.00</h3>
+      <a class="is-primary">{{aLongStr | truncate : 54}}</a>
+    </div>
+    <div class="listing-item vertical-flex" [class.is-3]="!isMobile" [class.is-6]="isMobile">
+      <img src="assets/images/sample-product.png" alt="">
+      <h3 class="price is-roboto has-small-letter-spacing is-medium">$1,225.00</h3>
+      <a class="is-primary">{{aLongStr | truncate : 54}}</a>
+    </div>
+    <div class="listing-item vertical-flex" [class.is-3]="!isMobile" [class.is-6]="isMobile">
+      <img src="assets/images/sample-product.png" alt="">
+      <h3 class="price is-roboto has-small-letter-spacing is-medium">$1,225.00</h3>
+      <a class="is-primary">{{aLongStr | truncate : 54}}</a>
+    </div>
+    <div class="listing-item vertical-flex" [class.is-3]="!isMobile" [class.is-6]="isMobile">
+      <img src="assets/images/sample-product.png" alt="">
+      <h3 class="price is-roboto has-small-letter-spacing is-medium">$1,225.00</h3>
+      <a class="is-primary">{{aLongStr | truncate : 54}}</a>
+    </div>
+    <div class="listing-item vertical-flex" [class.is-3]="!isMobile" [class.is-6]="isMobile">
+      <img src="assets/images/sample-product.png" alt="">
+      <h3 class="price is-roboto has-small-letter-spacing is-medium">$1,225.00</h3>
+      <a class="is-primary">{{aLongStr | truncate : 54}}</a>
+    </div>
+    <div class="listing-item vertical-flex" [class.is-3]="!isMobile" [class.is-6]="isMobile">
+      <img src="assets/images/sample-product.png" alt="">
+      <h3 class="price is-roboto has-small-letter-spacing is-medium">$1,225.00</h3>
+      <a class="is-primary">{{aLongStr | truncate : 54}}</a>
+    </div>
+    <div class="listing-item vertical-flex" [class.is-3]="!isMobile" [class.is-6]="isMobile">
+      <img src="assets/images/sample-product.png" alt="">
+      <h3 class="price is-roboto has-small-letter-spacing is-medium">$1,225.00</h3>
+      <a class="is-primary">{{aLongStr | truncate : 54}}</a>
+    </div>
+    <div class="listing-item vertical-flex" [class.is-3]="!isMobile" [class.is-6]="isMobile">
+      <img src="assets/images/sample-product.png" alt="">
+      <h3 class="price is-roboto has-small-letter-spacing is-medium">$1,225.00</h3>
+      <a class="is-primary has-small-letter-spacing">{{aLongStr | truncate : 54}}</a>
+    </div>
+  </div>
+  <hr class="light" *ngIf="isMobile">
+  <a [class.is-pulled-right]="!isMobile" class="show-more">Show More</a>
+</div>

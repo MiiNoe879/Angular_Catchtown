@@ -1,0 +1,32 @@
+.desktop {
+  img {
+    height: 50px;
+  }
+
+  h1, p {
+    color: #fff;
+    margin: 14px 0;
+  }
+
+  p {
+    padding: 0 14px;
+  }
+}
+
+.mobile {
+  img {
+    height: 36px;
+  }
+
+  h1 {
+    color: #000;
+    margin: 4px 0;
+  }
+
+  p {
+    color: #9b9a9a;
+    margin: 4px 0;
+    size: auto;
+    word-break: break-all;
+  }
+}

@@ -1,0 +1,23 @@
+<mat-menu #appMenu="matMenu" [yPosition]="'below'">
+  <!--<div class="karma-points">-->
+    <!--<div class="horizontal-flex nowrap">-->
+      <!--<div class="is-3">-->
+        <!--<img [src]="userAvatar()" alt="">-->
+      <!--</div>-->
+      <!--<div class="is-9">-->
+        <!--<div class="vertical-flex">-->
+          <!--<p>{{user.name}}</p>-->
+          <!--<p>xxxx Karma Points</p>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+  <button mat-menu-item> Settings </button>
+  <button mat-menu-item (click)="logUserOut()"> Logout </button>
+</mat-menu>
+
+<button [matMenuTriggerFor]="appMenu" class="horizontal-flex nowrap trigger">
+  <img [src]="userAvatar()" alt="">
+  <p>{{user.name}}</p>
+  <mat-icon>keyboard_arrow_down</mat-icon>
+</button>
